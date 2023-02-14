@@ -14,7 +14,7 @@ const refs = {
 refs.input.addEventListener('input', debounce(searchCountries, DEBOUNCE_DELAY));
 
 function searchCountries(e) {
-  const targetCountry = e.target.value;
+  const targetCountry = e.target.value.trim();
   deleteRender();
 
   if (targetCountry === '') {
